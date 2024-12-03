@@ -1,11 +1,11 @@
 {
-  "name": "env-switcher",
+  "name": "envpicker",
   "version": "1.0.0",
   "description": "A simple environment switcher for managing multiple .env file",
   "main": "envswitch.sh",
   "type": "module",
   "bin": {
-    "envswitcher": "./bin/envswitch.sh"
+    "envpicker": "bin/envswitch.sh"
   },
   "scripts": {
     "postinstall": "chmod +x bin/envswitch.sh"
@@ -17,11 +17,13 @@
     "env",
     "environment",
     "dotenv",
-    "env-switcher",
+    "env-picker",
     "environment-variables",
     "cli"
   ],
   "author": "CandraJulius",
-  "license": "ISC"
-  
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/Candra-Julius/envpicker"
+  }
 }
