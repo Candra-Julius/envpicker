@@ -28,11 +28,12 @@ npx envpicker [command]
 envpicker [command]
 
 Commands:
-  list              List all available environments
-  activate [env]    Switch to specified environment
-  deactivate        Remove active environment
-  init              Initialize default environment files
-  delete [env]      Delete specific environment file
+  list | ls               List all available environments
+  activate | use [env]    Switch to specified environment
+  save [env]              Save current .env to /env directory
+  deactivate | stop       Remove active environment
+  init                    Initialize default environment files
+  delete [env]            Delete specific environment file
 ```
 
 ### Basic Operations
@@ -64,6 +65,11 @@ envpicker deactivate
 5. Delete an environment:
 ```bash
 envpicker delete development
+```
+
+6. Save an environment:
+```bash
+envpicker save development
 ```
 
 ## File Structure

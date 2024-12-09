@@ -1,3 +1,4 @@
-env-switcher*.tgz
+env-switcher*
+envpicker*
 .npmignore
 encswitcher.config.json

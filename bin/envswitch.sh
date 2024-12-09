@@ -148,14 +148,26 @@ delete(){
     fi
 }
 
+save(){
+    if [ -f ".env" ]; then
+        if [ ! -d "./$ENV_DIR" ]; then
+            init
+        fi
+        cp ".env" "$ENV_DIR""/.env.""$1" 
+    else
+    log_error "file .env not found"
+    fi
+}
+
+
 case $1 in
-    "list")
+    "list" | "ls")
         list
         ;;
-    "activate")
+    "activate" | "use" | "pick")
         activate "$2"
         ;;
-    "deactivate")
+    "deactivate" | "stop")
         deactivate
         ;;
     "init")
@@ -163,6 +175,9 @@ case $1 in
         ;;
     "delete")
         delete "$2"
+        ;;
+    "save")
+        save "$2"
         ;;
     *)
         log_error "Unknown command: $1"
